@@ -1,0 +1,29 @@
+﻿@using CRM;
+@{
+    ViewBag.Title = "Customer Page";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div class="row">
+        @{
+            <h1>Customer List</h1>
+            foreach (Customer c in @Model)
+            {
+            <ul>
+                <li>
+                    <p>@c.FirstName @c.LastName</p>
+                </li>
+            </ul>
+                
+            }
+        }
+    </div>
+</body>
+</html>
